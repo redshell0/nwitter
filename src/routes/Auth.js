@@ -35,7 +35,7 @@ const Auth = () => {
       setError(error.message);
     }
   };
-  const toggleAccount = () => setNewAccount((prev) => !prev);
+
   const onSocialClick = async (event) => {
     const {
       target: { name },
@@ -51,6 +51,8 @@ const Auth = () => {
     const data = await authService.signInWithPopup(provider);
     console.log(data);
   };
+
+  const toggleAccount = () => setNewAccount((prev) => !prev);
 
   return (
     <div>
